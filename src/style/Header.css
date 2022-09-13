@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+.header {
+  height: 10vh;
+  background-color: rgb(236, 249, 255);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+.header-left > a > h1,
+p {
+  letter-spacing: 1px;
+  color: navy;
+}
+
+.header-left > a > p {
+  margin-left: 20px;
+  font-weight: 700;
+}
+.header-right {
+  margin-right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-right > button {
+  height: 2.5rem;
+  width: 6rem;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login {
+  background-color: rgb(255, 255, 255);
+  color: navy;
+}
+.signup {
+  background-color: rgb(57, 128, 219);
+  color: white;
+}

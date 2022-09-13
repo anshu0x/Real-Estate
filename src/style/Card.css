@@ -1,0 +1,35 @@
+.card {
+  height: 24rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px 0px grey;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 70px 20px 0;
+}
+.card:hover {
+  transform: scaleX(1.05);
+}
+.card-details {
+  margin-left: 15px;
+}
+.card-img {
+  border-radius: 10px 10px 0 0;
+}
+.card-price {
+  color: blue;
+  margin-top: 10px;
+}
+.card-price > span {
+  color: grey;
+}
+.card-title {
+  margin-top: 5px;
+}
+.card-address {
+  font-size: 12px;
+  font-weight: 600;
+  color: grey;
+  margin-top: 3.5px;
+}
