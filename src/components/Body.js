@@ -29,10 +29,6 @@ function Body() {
   const [PropertyOpt, setPropertyOpt] = useState(propertyType.value);
   const [location, setLocation] = useState(locationOpt.value);
 
-  // to Get value from the selected option
-
-  console.log(selectedOption);
-
   const filterLocation = (categItem) => {
     const updatedItem = propertyData.filter((curelem) => {
       return curelem.location === categItem;
