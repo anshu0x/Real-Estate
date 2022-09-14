@@ -53,7 +53,12 @@ function Body() {
       <div className="body-search">
         <h1>Search properties to rent</h1>
       </div>
-      <div className="filter-data">
+      <form
+        className="filter-data"
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <div className="filter-location">
           <label>Location</label>
           <Select
@@ -67,7 +72,7 @@ function Body() {
         </div>
         <div className="filter-when">
           <label>When</label>
-          <input type="date" placeholder="Select " />
+          <input type="date" placeholder="Select when to move" required />
         </div>
         <div className="filter-price">
           <label>Price</label>
@@ -91,12 +96,20 @@ function Body() {
             }}
           />
         </div>
+        <div className="filter-type">
+          <label>Property Type</label>
+          <select name="property" id="property">
+            <option value="house">House</option>
+            <option value="apartment">Apartment</option>
+            <option value="bungalow">bungalow</option>
+          </select>
+        </div>
         <div className="filter-button">
           <button onClick={() => setPropertData(propertyData)}>
             Clear Filter
           </button>
         </div>
-      </div>
+      </form>
       <div className="body-result">
         {propertData.map((data) => (
           <CardDemo
