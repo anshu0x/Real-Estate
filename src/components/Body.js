@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../style/Body.css";
 import CardDemo from "./Cards";
 // import Card from "./Card";
@@ -17,7 +17,7 @@ function Body() {
         </div>
         <div className="filter-when">
           <label>When</label>
-          <input type="date" />
+          <input type="date" placeholder="Select " />
         </div>
         <div className="filter-price">
           <label>Price</label>
