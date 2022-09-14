@@ -10,7 +10,7 @@ function Body() {
       <div className="body-search">
         <h1>Search properties to rent</h1>
       </div>
-      <div className="filter-data">
+      <form className="filter-data">
         <div className="filter-location">
           <label>Location</label>
           <h1>New York,USA</h1>
@@ -27,10 +27,18 @@ function Body() {
             <option value="high">$3000-$8000</option>
           </select>
         </div>
+        <div className="filter-type">
+          <label>Property Type</label>
+          <select name="property" id="property">
+            <option value="house">$200-$1000</option>
+            <option value="apartment">$1000-$3000</option>
+            <option value="bungalow">$3000-$8000</option>
+          </select>
+        </div>
         <div className="filter-button">
           <button className="btn">Search</button>
         </div>
-      </div>
+      </form>
       <div className="body-result">
         {propertyData.map((data) => (
           <CardDemo
