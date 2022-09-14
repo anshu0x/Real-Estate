@@ -6,7 +6,8 @@ export const propertyData = [
     title: "Private Modern Retreat",
     address: "Water Mill South, NY",
     location: "New York",
-    type: "house"
+    type: "bungalow",
+    label: "average",
   },
   {
     image:
@@ -15,7 +16,8 @@ export const propertyData = [
     title: "Water Front Estate",
     address: "167 Dune Road Quogue, NY",
     location: "New York",
-    type: "house"
+    type: "bungalow",
+    label: "average",
   },
   {
     image:
@@ -24,7 +26,8 @@ export const propertyData = [
     title: "Compound Abutting",
     address: "Water Mill Compound, NY",
     location: "New York",
-    type: "house"
+    type: "house",
+    label: "high",
   },
   {
     image:
@@ -33,7 +36,8 @@ export const propertyData = [
     title: "Private Modern Retreat",
     address: "Water Mill South New York, NY",
     location: "New York",
-    type: "house"
+    type: "house",
+    label: "high",
   },
   {
     image: "https://tranio.com/photos/adt/1bce26bb/24109223/275x176.jpg",
@@ -41,7 +45,8 @@ export const propertyData = [
     title: "Town Home",
     address: "Scarborough, Toronto , Canada",
     location: "Canada",
-    type: "house"
+    type: "house",
+    label: "low",
   },
   {
     image: "https://tranio.com/photos/adt/28562a50/29753945/275x176.jpg",
@@ -49,15 +54,17 @@ export const propertyData = [
     title: "Palm Harbor",
     address: "North York, Toronto , Canada",
     location: "Canada",
-    type: "house"
+    type: "house",
+    label: "low",
   },
   {
     image: "https://tranio.com/photos/adt/ab46a050/24204776/275x176.jpg",
-    price: "$1150",
+    price: "$2000",
     title: "Faulker Ave",
     address: "North York, Toronto , Canada",
     location: "Canada",
-    type: "house"
+    type: "house",
+    label: "average",
   },
   {
     image: "https://tranio.com/photos/adt/ee21766c/23780189/275x176.jpg",
@@ -65,7 +72,8 @@ export const propertyData = [
     title: "Villas Palacio",
     address: "Chicago, Illinois",
     location: "Chicago",
-    type: "house"
+    type: "house",
+    label: "average",
   },
   {
     image: "https://tranio.com/photos/adt/bcec0cd0/28635040/275x176.jpg",
@@ -73,7 +81,8 @@ export const propertyData = [
     title: "Nature Hut",
     address: "Chicago, Illinois",
     location: "Chicago",
-    type: "house"
+    type: "apartment",
+    label: "average",
   },
   {
     image: "https://tranio.com/photos/adt/bd54cc79/28634934/275x176.jpg",
@@ -81,7 +90,8 @@ export const propertyData = [
     title: "Luxury Apartment in Burj Khalifa",
     address: "Dubai,UAE",
     location: "UAE",
-    type: "house"
+    type: "apartment",
+    label: "high",
   },
   {
     image: "https://tranio.com/photos/adt/f5710668/28634874/275x176.jpg",
@@ -89,6 +99,7 @@ export const propertyData = [
     title: "High-Rise Residence",
     address: "Dubai,UAE",
     location: "UAE",
-    type: "house"
+    type: "apartment",
+    label: "high",
   },
 ];
