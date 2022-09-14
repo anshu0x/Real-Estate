@@ -22,7 +22,7 @@ function Body() {
         </div>
         <div className="filter-when">
           <label>When</label>
-          <input type="date" placeholder="Select " />
+          <input type="date" placeholder="Select when to move" required />
         </div>
         <div className="filter-price">
           <label>Price</label>

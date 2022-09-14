@@ -43,6 +43,7 @@
   display: flex;
   flex-direction: column;
   width: 12rem;
+  border-right: 1px solid grey;
 }
 .filter-when > label {
   color: grey;
@@ -51,5 +52,77 @@
   height: 2rem;
   background-color: rgb(236, 249, 255);
   outline: none;
-  
+  border: none;
+  margin-right: 20px;
+  font-size: 15px;
+}
+input[type="date"]::before {
+  color: black;
+  font-size: 12px;
+  font-family: "Barlow";
+  content: attr(placeholder);
+}
+input[type="date"] {
+  color: #ffffff;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+  color: #666666;
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  content: "" !important;
+}
+
+.filter-price {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  border-right: 1px solid grey;
+}
+.filter-price > label {
+  color: grey;
+  margin-left: -20px;
+}
+.filter-price > select {
+  height: 2rem;
+  background-color: rgb(236, 249, 255);
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-right: 11px;
+  margin-left: -23px;
+}
+.filter-type {
+  display: flex;
+  flex-direction: column;
+  width: 7rem;
+  border-right: 1px solid grey;
+}
+.filter-type > label {
+  color: grey;
+  margin-left: -20px;
+}
+.filter-type > select {
+  height: 2rem;
+  background-color: rgb(236, 249, 255);
+  outline: none;
+  border: none;
+  font-size: 15px;
+  margin-right: 11px;
+  margin-left: -23px;
+}
+.filter-type > select > option {
+  background-color: rgb(236, 249, 255);
+  font-family: "Barlow";
+}
+.btn {
+  background-color: rgb(57, 128, 219);
+  color: white;
+  height: 2.5rem;
+  width: 6rem;
+  font-size: 13px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
