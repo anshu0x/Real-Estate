@@ -28,6 +28,7 @@ function Home() {
   const [PropertyOpt, setPropertyOpt] = useState(propertyType.value);
   const [location, setLocation] = useState(locationOpt.value);
   const [value, setValue] = useState("");
+  const [isDisable, setisDisable] = useState(true);
 
   const submitFilter = () => {
     const updatedItem = propertyData.filter((curelem) => {
@@ -40,11 +41,24 @@ function Home() {
       }
     });
     setPropertData(updatedItem);
-  };
 
+    // conditionly disabling button
+    
+  };
+const disableBtn = ()=>{
+console.log(!!PropertyOpt);
+console.log(!!selectedOption);
+console.log(!!location);
+
+  if (!!PropertyOpt == true || !!selectedOption == true || !!location == true) {
+    setisDisable(!isDisable);
+    alert("s")
+  }
+}
   const handleInput = (e) => {
     setValue(e.target.value);
   };
+
   return (
     <main>
       <section className="search-properties">
@@ -103,7 +117,12 @@ function Home() {
         </label>
         <label>
           Search
-          <button onClick={submitFilter} id="submitbutton" type="submit">
+          <button
+            disabled={isDisable}
+            onClick={()=>{submitFilter(); disableBtn()}}
+            id="submitbutton"
+            type="submit"
+          >
             Search
           </button>
         </label>
@@ -135,4 +154,3 @@ function Home() {
 }
 
 export default Home;
-

@@ -13,7 +13,7 @@ export default function Navbar() {
     }
   }, [isNavExpanded]);
   return (
-    <nav className="navigation">
+    <nav className="navigation">  
       <a href="/" className="brand-name">
         <MdRealEstateAgent />
         Real Estate
