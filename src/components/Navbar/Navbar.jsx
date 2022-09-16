@@ -33,19 +33,19 @@ export default function Navbar() {
       >
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Rent</Link>
           </li>
           <li>
-            <Link to="/">Services</Link>
+            <Link to="/">Buy</Link>
           </li>
           <li>
-            <Link to="/">Faq</Link>
+            <Link to="/">Sell</Link>
           </li>
           <li>
-            <Link to="/">About</Link>
+            <Link to="/">Manage Property</Link>
           </li>
           <li>
-            <Link to="/">Login</Link>
+            <Link to="/">Resource</Link>
           </li>
         </ul>
       </div>
