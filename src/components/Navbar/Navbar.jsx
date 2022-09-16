@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { MdRealEstateAgent } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RiMenu2Line } from "react-icons/ri";
-
 import "../../style/Navbar.css";
 export default function Navbar() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -15,10 +14,10 @@ export default function Navbar() {
   }, [isNavExpanded]);
   return (
     <nav className="navigation">
-      <NavLink to="/" className="brand-name">
+      <Link to="/" className="brand-name">
         <MdRealEstateAgent />
-        <a> Real Estate</a>
-      </NavLink>
+        Real Estate
+      </Link>
       <button
         className="hamburger"
         onClick={() => {
@@ -34,29 +33,19 @@ export default function Navbar() {
       >
         <ul>
           <li>
-            <NavLink exact activeClassName="active-link" to="/">
-              Home
-            </NavLink>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <NavLink exact activeClassName="active-link" to="/services">
-              Services
-            </NavLink>
+            <Link to="/services">Services</Link>
           </li>
           <li>
-            <NavLink exact activeClassName="active-link" to="/faq">
-              Faq
-            </NavLink>
+            <Link to="/faq">Faq</Link>
           </li>
           <li>
-            <NavLink exact activeClassName="active-link" to="/about">
-              About
-            </NavLink>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <NavLink exact activeClassName="active-link" to="/login">
-              Login
-            </NavLink>
+            <Link to="/login">Login</Link>
           </li>
         </ul>
       </div>
