@@ -29,24 +29,19 @@ function Home() {
   const [location, setLocation] = useState(locationOpt.value);
   const [value, setValue] = useState("");
 
-  const filterLocation = (categItem) => {
+  const submitFilter = () => {
     const updatedItem = propertyData.filter((curelem) => {
-      return curelem.location === categItem;
+      if (curelem.type === PropertyOpt) {
+        return curelem.type === PropertyOpt;
+      } else if (curelem.label === selectedOption) {
+        return curelem.label === selectedOption;
+      } else if (curelem.location === location) {
+        return curelem.location === location;
+      }
     });
     setPropertData(updatedItem);
   };
-  const filterItem = (categItem) => {
-    const updatedItem = propertyData.filter((curelem) => {
-      return curelem.label === categItem;
-    });
-    setPropertData(updatedItem);
-  };
-  const filerPropertType = (categItem) => {
-    const updatedItem = propertyData.filter((curelem) => {
-      return curelem.type === categItem;
-    });
-    setPropertData(updatedItem);
-  };
+
   const handleInput = (e) => {
     setValue(e.target.value);
   };
@@ -61,7 +56,7 @@ function Home() {
           }}
         >
           <input
-            onChange={handleInput}
+            onKeyDown={handleInput}
             type="text"
             placeholder="Search With Search Bar"
           />
@@ -83,7 +78,6 @@ function Home() {
             isSearchable={false}
             onChange={(e) => {
               setLocation(e.value);
-              filterLocation(e.value);
             }}
           />
         </label>
@@ -94,7 +88,6 @@ function Home() {
             isSearchable={false}
             onChange={(e) => {
               setSelectedOption(e.value);
-              filterItem(e.value);
             }}
           />
         </label>
@@ -105,17 +98,13 @@ function Home() {
             isSearchable={false}
             onChange={(e) => {
               setPropertyOpt(e.value);
-              filerPropertType(e.value);
             }}
           />
         </label>
         <label>
-          Clear Filter
-          <button
-            id="submitbutton"
-            onClick={() => setPropertData(propertyData)}
-          >
-            Clear Filter
+          Search
+          <button onClick={submitFilter} id="submitbutton" type="submit">
+            Search
           </button>
         </label>
       </form>
