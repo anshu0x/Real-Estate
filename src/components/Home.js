@@ -28,7 +28,6 @@ function Home() {
   const [PropertyOpt, setPropertyOpt] = useState(propertyType.value);
   const [location, setLocation] = useState(locationOpt.value);
   const [value, setValue] = useState("");
-  const [isDisable, setisDisable] = useState(true);
 
   const submitFilter = () => {
     const updatedItem = propertyData.filter((curelem) => {
@@ -40,21 +39,10 @@ function Home() {
         return curelem.location === location;
       }
     });
-    setPropertData(updatedItem);
-
-    // conditionly disabling button
-    
+    if (!!PropertyOpt || !!selectedOption || !!location) {
+      setPropertData(updatedItem);
+    }
   };
-const disableBtn = ()=>{
-console.log(!!PropertyOpt);
-console.log(!!selectedOption);
-console.log(!!location);
-
-  if (!!PropertyOpt == true || !!selectedOption == true || !!location == true) {
-    setisDisable(!isDisable);
-    alert("s")
-  }
-}
   const handleInput = (e) => {
     setValue(e.target.value);
   };
@@ -70,11 +58,17 @@ console.log(!!location);
           }}
         >
           <input
-            onKeyDown={handleInput}
+            onChange={handleInput}
             type="text"
             placeholder="Search With Search Bar"
           />
-          <button id="submitbutton" type="submit" disabled>
+
+          <button
+            onClick={() => setValue("")}
+            id="submitbutton"
+            type="submit"
+            disabled
+          >
             Search
           </button>
         </form>
@@ -118,8 +112,8 @@ console.log(!!location);
         <label>
           Search
           <button
-            disabled={isDisable}
-            onClick={()=>{submitFilter(); disableBtn()}}
+            disabled={false}
+            onClick={submitFilter}
             id="submitbutton"
             type="submit"
           >
