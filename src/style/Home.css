@@ -150,6 +150,10 @@ button:disabled {
   .date-picker {
     background-color: rgb(239, 242, 247);
     width: 100%;
-    position: relative;
+    position: absolute;
+    display: grid;
+    place-content: center;
+    top: 2rem;
+    left: 0rem;
   }
 }

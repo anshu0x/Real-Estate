@@ -32,7 +32,7 @@ export const propertyData = [
   {
     image:
       "https://a0temcqkto3yttc25b1htyjn-wpengine.netdna-ssl.com/wp-content/uploads/2022/08/2000S.OceanBlvd-HallandaleBeach_FL-1536x1024.jpg",
-    price: "$2,895",
+    price: "$1,495",
     title: "OCEANFRONT PENTHOUSE",
     address: "Hallandale Beach, FL",
     location: "Miami",
