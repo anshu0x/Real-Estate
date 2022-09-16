@@ -1,18 +1,19 @@
 .card {
-  height: 24rem;
-  width: 25rem;
+  min-height: 17rem;
+  height: 100%;
+  width: 18rem;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 10px 0px grey;
+  box-shadow: 0 0 5px 0px grey;
   border-radius: 10px;
   cursor: pointer;
-  margin: 20px 70px 20px 0;
 }
 .card:hover {
-  transform: scaleX(1.05);
+  box-shadow: 0 0 5px 0px black;
 }
 .card-details {
   margin-left: 15px;
+  font-size: 1em;
 }
 .card-img {
   border-radius: 10px 10px 0 0;
@@ -20,16 +21,43 @@
 .card-price {
   color: blue;
   margin-top: 10px;
+  font-size: 1em;
 }
 .card-price > span {
   color: grey;
 }
 .card-title {
   margin-top: 5px;
+  font-size: 1em;
 }
 .card-address {
   font-size: 12px;
   font-weight: 600;
   color: grey;
   margin-top: 3.5px;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    min-height: 16rem;
+    height: 100%;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0px grey;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 600px) {
+  .card {
+    min-height: 16rem;
+    height: 100%;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 5px 0px grey;
+    border-radius: 10px;
+    cursor: pointer;
+  }
 }

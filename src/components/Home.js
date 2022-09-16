@@ -1,20 +1,19 @@
-import React, { useEffect, useState } from "react";
-import "../style/Body.css";
-import CardDemo from "./Cards";
-// import Card from "./Card";
+import React, { useState } from "react";
+import "../style/Home.css";
+import Card from "./Card";
 import { propertyData } from "./Real-estate-data";
 import Select from "react-select";
 
-function Body() {
+function Home() {
   const priceLabel = [
     { value: "low", label: "$200-$1000" },
     { value: "average", label: "$1000-$3000" },
     { value: "high", label: "$3000-$8000" },
   ];
   const propertyType = [
-    { value: "house", label: "house" },
-    { value: "apartment", label: "apartment" },
-    { value: "bungalow", label: "bungalow" },
+    { value: "house", label: "House" },
+    { value: "apartment", label: "Apartment" },
+    { value: "bungalow", label: "Bungalow" },
   ];
 
   const locationOpt = [
@@ -28,6 +27,7 @@ function Body() {
   const [selectedOption, setSelectedOption] = useState(priceLabel.value);
   const [PropertyOpt, setPropertyOpt] = useState(propertyType.value);
   const [location, setLocation] = useState(locationOpt.value);
+  const [value, setValue] = useState("");
 
   const filterLocation = (categItem) => {
     const updatedItem = propertyData.filter((curelem) => {
@@ -47,20 +47,37 @@ function Body() {
     });
     setPropertData(updatedItem);
   };
-
+  const handleInput = (e) => {
+    setValue(e.target.value);
+  };
   return (
-    <div className="body">
-      <div className="body-search">
+    <main>
+      <section className="search-properties">
         <h1>Search properties to rent</h1>
-      </div>
+        <form
+          id="search-form"
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+        >
+          <input
+            onChange={handleInput}
+            type="text"
+            placeholder="Search With Search Bar"
+          />
+          <button id="submitbutton" type="submit" disabled>
+            Search
+          </button>
+        </form>
+      </section>
       <form
         className="filter-data"
         onSubmit={(e) => {
           e.preventDefault();
         }}
       >
-        <div className="filter-location">
-          <label>Location</label>
+        <label>
+          Location
           <Select
             options={locationOpt}
             isSearchable={false}
@@ -69,13 +86,9 @@ function Body() {
               filterLocation(e.value);
             }}
           />
-        </div>
-        <div className="filter-when">
-          <label>When</label>
-          <input type="date" placeholder="Select when to move" required />
-        </div>
-        <div className="filter-price">
-          <label>Price</label>
+        </label>
+        <label>
+          Price
           <Select
             options={priceLabel}
             isSearchable={false}
@@ -84,9 +97,9 @@ function Body() {
               filterItem(e.value);
             }}
           />
-        </div>
-        <div className="filter-price">
-          <label>Property Type</label>
+        </label>
+        <label>
+          Property Type
           <Select
             options={propertyType}
             isSearchable={false}
@@ -95,35 +108,41 @@ function Body() {
               filerPropertType(e.value);
             }}
           />
-        </div>
-        <div className="filter-type">
-          <label>Property Type</label>
-          <select name="property" id="property">
-            <option value="house">House</option>
-            <option value="apartment">Apartment</option>
-            <option value="bungalow">bungalow</option>
-          </select>
-        </div>
-        <div className="filter-button">
-          <button onClick={() => setPropertData(propertyData)}>
+        </label>
+        <label>
+          Clear Filter
+          <button
+            id="submitbutton"
+            onClick={() => setPropertData(propertyData)}
+          >
             Clear Filter
           </button>
-        </div>
+        </label>
       </form>
-      <div className="body-result">
-        {propertData.map((data) => (
-          <CardDemo
-            key={data.price}
-            className="result-card"
-            title={data.title}
-            image={data.image}
-            price={data.price}
-            address={data.address}
-          />
-        ))}
+      <div className="search-result">
+        {propertData
+          .filter((data) => {
+            const { title, address } = data;
+            if (
+              title.toLowerCase().includes(value.toLowerCase()) ||
+              address.toLowerCase().includes(value.toLowerCase())
+            ) {
+              return data;
+            }
+          })
+          .map((data) => (
+            <Card
+              key={data.price}
+              className="result-card"
+              title={data.title}
+              image={data.image}
+              price={data.price}
+              address={data.address}
+            />
+          ))}
       </div>
-    </div>
+    </main>
   );
 }
 
-export default Body;
+export default Home;
