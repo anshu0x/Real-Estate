@@ -153,7 +153,7 @@ button:disabled {
     position: absolute;
     display: grid;
     place-content: center;
-    top: 2rem;
+      top: 2rem;
     left: 0rem;
   }
 }

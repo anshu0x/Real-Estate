@@ -8,6 +8,7 @@ export const propertyData = [
     location: "Florida",
     type: "bungalow",
     label: "high",
+    month:1
   },
   {
     image:
@@ -18,6 +19,7 @@ export const propertyData = [
     location: "Florida",
     type: "bungalow",
     label: "high",
+    month:4
   },
   {
     image:
@@ -28,6 +30,7 @@ export const propertyData = [
     location: "Miami",
     type: "bungalow",
     label: "high",
+    month:2
   },
   {
     image:
@@ -38,6 +41,7 @@ export const propertyData = [
     location: "Miami",
     type: "bungalow",
     label: "average",
+    month:7
   },
   {
     image:
@@ -48,6 +52,7 @@ export const propertyData = [
     location: "Miami",
     type: "bungalow",
     label: "average",
+    month:3
   },
   {
     image:
@@ -58,6 +63,7 @@ export const propertyData = [
     location: "New York",
     type: "bungalow",
     label: "average",
+    month:4
   },
   {
     image:
@@ -68,6 +74,7 @@ export const propertyData = [
     location: "New York",
     type: "bungalow",
     label: "average",
+    month:9
   },
   {
     image:
@@ -78,6 +85,7 @@ export const propertyData = [
     location: "New York",
     type: "house",
     label: "high",
+    month:8
   },
   {
     image:
@@ -88,6 +96,7 @@ export const propertyData = [
     location: "New York",
     type: "house",
     label: "high",
+    month:3
   },
   {
     image: "https://tranio.com/photos/adt/1bce26bb/24109223/275x176.jpg",
@@ -97,6 +106,7 @@ export const propertyData = [
     location: "Canada",
     type: "house",
     label: "low",
+    month:5
   },
   {
     image: "https://tranio.com/photos/adt/28562a50/29753945/275x176.jpg",
@@ -106,6 +116,7 @@ export const propertyData = [
     location: "Canada",
     type: "house",
     label: "low",
+    month:6
   },
   {
     image: "https://tranio.com/photos/adt/ab46a050/24204776/275x176.jpg",
@@ -115,6 +126,7 @@ export const propertyData = [
     location: "Canada",
     type: "house",
     label: "average",
+    month:11
   },
   {
     image: "https://tranio.com/photos/adt/ee21766c/23780189/275x176.jpg",
@@ -124,6 +136,7 @@ export const propertyData = [
     location: "Chicago",
     type: "house",
     label: "average",
+    month:12
   },
   {
     image: "https://tranio.com/photos/adt/bcec0cd0/28635040/275x176.jpg",
@@ -133,6 +146,7 @@ export const propertyData = [
     location: "Chicago",
     type: "apartment",
     label: "average",
+    month:10
   },
   {
     image: "https://tranio.com/photos/adt/bd54cc79/28634934/275x176.jpg",
@@ -142,6 +156,7 @@ export const propertyData = [
     location: "UAE",
     type: "apartment",
     label: "high",
+    month:12
   },
   {
     image: "https://tranio.com/photos/adt/f5710668/28634874/275x176.jpg",
@@ -151,5 +166,6 @@ export const propertyData = [
     location: "UAE",
     type: "apartment",
     label: "high",
+    month:8
   },
 ];

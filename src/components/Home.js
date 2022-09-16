@@ -4,7 +4,6 @@ import Card from "./Card/Card";
 import { propertyData } from "./data/propertyData";
 import Select from "react-select";
 import { BsCalendarDate } from "react-icons/bs";
-import { addDays } from "date-fns";
 import { Calendar } from "react-date-range";
 
 function Home() {
@@ -34,8 +33,9 @@ function Home() {
   const [location, setLocation] = useState(locationOpt.value);
   const [value, setValue] = useState("");
   const [isCalender, setisCalender] = useState(false);
-
+  const [mydate, setdate] = useState();
   const submitFilter = () => {
+    let dateToMonth = new Date(mydate).getMonth() + 1;
     const updatedItem = propertyData.filter((curelem) => {
       if (curelem.type === PropertyOpt) {
         return curelem.type === PropertyOpt;
@@ -43,16 +43,18 @@ function Home() {
         return curelem.label === selectedOption;
       } else if (curelem.location === location) {
         return curelem.location === location;
+      } else if (curelem.month === dateToMonth) {
+        return curelem.month === dateToMonth;
       }
     });
-    if (!!PropertyOpt || !!selectedOption || !!location) {
+    if (!!PropertyOpt || !!selectedOption || !!location || !!mydate) {
       setPropertData(updatedItem);
     }
   };
   const handleInput = (e) => {
     setValue(e.target.value);
   };
-  const [mydate, setdate] = React.useState(null);
+
   const handleSelect = (e) => {
     setdate(e);
     setisCalender(!isCalender);
