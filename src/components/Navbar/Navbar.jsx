@@ -36,16 +36,16 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/">Services</Link>
           </li>
           <li>
-            <Link to="/faq">Faq</Link>
+            <Link to="/">Faq</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/">Login</Link>
           </li>
         </ul>
       </div>
