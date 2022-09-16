@@ -14,10 +14,10 @@ export default function Navbar() {
   }, [isNavExpanded]);
   return (
     <nav className="navigation">
-      <Link to="/" className="brand-name">
+      <a href="/" className="brand-name">
         <MdRealEstateAgent />
         Real Estate
-      </Link>
+      </a>
       <button
         className="hamburger"
         onClick={() => {
