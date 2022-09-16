@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../style/Home.css";
-import Card from "./Card";
-import { propertyData } from "./Real-estate-data";
+import Card from "./Card/Card";
+import { propertyData } from "./data/propertyData";
 import Select from "react-select";
+import { BsCalendarDate } from "react-icons/bs";
+import { addDays } from "date-fns";
+import { Calendar } from "react-date-range";
 
 function Home() {
   const priceLabel = [
@@ -21,6 +24,8 @@ function Home() {
     { value: "Canada", label: "Canada" },
     { value: "UAE", label: "UAE" },
     { value: "Chicago", label: "Chicago" },
+    { value: "Miami", label: "Miami" },
+    { value: "Florida", label: "Florida" },
   ];
 
   const [propertData, setPropertData] = useState(propertyData);
@@ -28,6 +33,7 @@ function Home() {
   const [PropertyOpt, setPropertyOpt] = useState(propertyType.value);
   const [location, setLocation] = useState(locationOpt.value);
   const [value, setValue] = useState("");
+  const [isCalender, setisCalender] = useState(false);
 
   const submitFilter = () => {
     const updatedItem = propertyData.filter((curelem) => {
@@ -46,7 +52,11 @@ function Home() {
   const handleInput = (e) => {
     setValue(e.target.value);
   };
-
+  const [mydate, setdate] = React.useState(null);
+  const handleSelect = (e) => {
+    setdate(e);
+    setisCalender(!isCalender);
+  };
   return (
     <main>
       <section className="search-properties">
@@ -98,6 +108,25 @@ function Home() {
               setSelectedOption(e.value);
             }}
           />
+        </label>
+        <label>
+          When
+          {isCalender ? (
+            <div className="date-picker">
+              <Calendar date={new Date()} onChange={handleSelect} />
+            </div>
+          ) : (
+            <p id="selectdate" onClick={() => setisCalender(!isCalender)}>
+              {!mydate ? (
+                <span> Date </span>
+              ) : (
+                <span>{mydate.toString().slice(0, 10)} </span>
+              )}
+              <span>
+                <BsCalendarDate />
+              </span>
+            </p>
+          )}
         </label>
         <label>
           Property Type

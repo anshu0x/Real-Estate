@@ -1,6 +1,56 @@
 export const propertyData = [
   {
     image:
+      "https://www.bespokerealestate.com/wp-content/uploads/2020/03/271DuneRdBridgehampton_backv6.jpg",
+    price: "$5,895",
+    title: "271 Dune Road",
+    address: "Bridgehampton, NY",
+    location: "Florida",
+    type: "bungalow",
+    label: "high",
+  },
+  {
+    image:
+      "https://www.bespokerealestate.com/wp-content/uploads/2022/03/DJI_0557-HIGH.jpg",
+    price: "$7,895",
+    title: "Water Mill",
+    address: "Compound, NY",
+    location: "Florida",
+    type: "bungalow",
+    label: "high",
+  },
+  {
+    image:
+      "https://www.bespokerealestate.com/wp-content/uploads/2022/07/109_Glover_FrontAngle-WEB.jpg",
+    price: "$6,895",
+    title: "OCEANFRONT PENTHOUSE",
+    address: "Hallandale Beach, FL",
+    location: "Miami",
+    type: "bungalow",
+    label: "high",
+  },
+  {
+    image:
+      "https://a0temcqkto3yttc25b1htyjn-wpengine.netdna-ssl.com/wp-content/uploads/2022/08/2000S.OceanBlvd-HallandaleBeach_FL-1536x1024.jpg",
+    price: "$2,895",
+    title: "OCEANFRONT PENTHOUSE",
+    address: "Hallandale Beach, FL",
+    location: "Miami",
+    type: "bungalow",
+    label: "average",
+  },
+  {
+    image:
+      "https://a0temcqkto3yttc25b1htyjn-wpengine.netdna-ssl.com/wp-content/uploads/2022/06/Waldor_Astoria-1536x1024.jpg",
+    price: "$2,895",
+    title: "PENTHOUSE/SKY RESIDENCES",
+    address: "Waldorf Astoria Miami FL",
+    location: "Miami",
+    type: "bungalow",
+    label: "average",
+  },
+  {
+    image:
       "https://www.bespokerealestate.com/wp-content/uploads/2021/11/55_DavidsLn_Exteriors_highres-19-WEB.jpg",
     price: "$2,095",
     title: "Private Modern Retreat",
@@ -87,7 +137,7 @@ export const propertyData = [
   {
     image: "https://tranio.com/photos/adt/bd54cc79/28634934/275x176.jpg",
     price: "$7000",
-    title: "Luxury Apartment in Burj Khalifa",
+    title: "Luxury Apart. in Burj Khalifa",
     address: "Dubai,UAE",
     location: "UAE",
     type: "apartment",
