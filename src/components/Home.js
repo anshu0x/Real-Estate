@@ -34,7 +34,7 @@ function Home() {
   const [value, setValue] = useState("");
   const [isCalender, setisCalender] = useState(false);
   const [mydate, setdate] = useState();
-  const resultRef = useRef(null)
+  const resultRef = useRef(null);
   const submitFilter = () => {
     let dateToMonth = new Date(mydate).getMonth() + 1;
     const updatedItem = propertyData.filter((curelem) => {
@@ -49,9 +49,9 @@ function Home() {
       }
     });
     if (!!PropertyOpt || !!selectedOption || !!location || !!mydate) {
+      resultRef.current.scrollIntoView();
       setPropertData(updatedItem);
     }
-    resultRef.current.scrollIntoView()
   };
   const handleInput = (e) => {
     setValue(e.target.value);
