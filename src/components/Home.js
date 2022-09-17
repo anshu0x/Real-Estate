@@ -36,6 +36,7 @@ function Home() {
   const [mydate, setdate] = useState();
   const resultRef = useRef(null);
   const submitFilter = () => {
+    resultRef.current.scrollIntoView();
     let dateToMonth = new Date(mydate).getMonth() + 1;
     const updatedItem = propertyData.filter((curelem) => {
       if (curelem.type === PropertyOpt) {
@@ -49,7 +50,6 @@ function Home() {
       }
     });
     if (!!PropertyOpt || !!selectedOption || !!location || !!mydate) {
-      resultRef.current.scrollIntoView();
       setPropertData(updatedItem);
     }
   };

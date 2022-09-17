@@ -57,11 +57,11 @@ export const propertyData = [
   {
     image:
       "https://www.bespokerealestate.com/wp-content/uploads/2021/11/55_DavidsLn_Exteriors_highres-19-WEB.jpg",
-    price: "$2,095",
+    price: "$1995",
     title: "Private Modern Retreat",
     address: "Water Mill South, NY",
     location: "New York",
-    type: "bungalow",
+    type: "house",
     label: "average",
     month:4
   },
@@ -110,7 +110,7 @@ export const propertyData = [
   },
   {
     image: "https://tranio.com/photos/adt/28562a50/29753945/275x176.jpg",
-    price: "$1050",
+    price: "$850",
     title: "Palm Harbor",
     address: "North York, Toronto , Canada",
     location: "Canada",
