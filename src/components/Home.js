@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "../style/Home.css";
 import Card from "./Card/Card";
 import { propertyData } from "./data/propertyData";
@@ -34,6 +34,7 @@ function Home() {
   const [value, setValue] = useState("");
   const [isCalender, setisCalender] = useState(false);
   const [mydate, setdate] = useState();
+  const resultRef = useRef(null)
   const submitFilter = () => {
     let dateToMonth = new Date(mydate).getMonth() + 1;
     const updatedItem = propertyData.filter((curelem) => {
@@ -50,6 +51,7 @@ function Home() {
     if (!!PropertyOpt || !!selectedOption || !!location || !!mydate) {
       setPropertData(updatedItem);
     }
+    resultRef.current.scrollIntoView()
   };
   const handleInput = (e) => {
     setValue(e.target.value);
@@ -152,7 +154,7 @@ function Home() {
           </button>
         </label>
       </form>
-      <div className="search-result">
+      <div className="search-result" ref={resultRef}>
         {propertData
           .filter((data) => {
             const { title, address } = data;
